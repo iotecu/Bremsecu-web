@@ -25,8 +25,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Fix project-relative asset paths for GitHub Pages
+        run: |
+          sed -i 's|href="/|href="./|g; s|src="/|src="./|g; s|srcset="/|srcset="./|g' public/*.html
       - name: Upload public folder
         uses: actions/upload-pages-artifact@v3
         with:
