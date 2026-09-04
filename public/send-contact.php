@@ -11,11 +11,16 @@ $recipient = 'info@bremsecu.com';
 $fromAddress = 'info@bremsecu.com';
 $siteName = 'Bremsecu';
 
+function safe_substr(string $value, int $length): string
+{
+    return function_exists('mb_substr') ? mb_substr($value, 0, $length) : substr($value, 0, $length);
+}
+
 function clean_line(string $value, int $maxLength): string
 {
     $value = trim($value);
     $value = str_replace(["\r", "\n"], ' ', $value);
-    return mb_substr($value, 0, $maxLength);
+    return safe_substr($value, $maxLength);
 }
 
 function redirect_result(bool $sent): void
@@ -24,12 +29,10 @@ function redirect_result(bool $sent): void
     exit;
 }
 
-// Honeypot: humans should never fill this field.
 if (!empty($_POST['website'] ?? '')) {
     redirect_result(true);
 }
 
-// Basic timing check to reject instant automated submissions.
 $started = isset($_POST['form_started']) ? (int) $_POST['form_started'] : 0;
 $elapsedMs = $started > 0 ? ((int) round(microtime(true) * 1000)) - $started : 0;
 if ($started <= 0 || $elapsedMs < 2500 || $elapsedMs > 86400000) {
@@ -40,8 +43,7 @@ $name = clean_line((string) ($_POST['name'] ?? ''), 120);
 $company = clean_line((string) ($_POST['company'] ?? ''), 160);
 $email = trim((string) ($_POST['email'] ?? ''));
 $topic = clean_line((string) ($_POST['topic'] ?? ''), 120);
-$message = trim((string) ($_POST['message'] ?? ''));
-$message = mb_substr($message, 0, 5000);
+$message = safe_substr(trim((string) ($_POST['message'] ?? '')), 5000);
 
 $allowedTopics = [
     'Technical discussion',
