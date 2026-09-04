@@ -122,6 +122,11 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
 .contact-box { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: #12161b; }
 .contact-box label { display:block; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .contact-box input, .contact-box textarea, .contact-box select { width: 100%; background:#0b0e12; border:1px solid var(--line); color:#fff; padding: 14px 15px; border-radius: 10px; font: inherit; margin-bottom: 16px; }
+.contact-box input:focus, .contact-box textarea:focus, .contact-box select:focus { outline: 2px solid rgba(228,53,47,.35); border-color: rgba(228,53,47,.75); }
+.hp-field { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+.form-status { margin-top: 16px; padding: 12px 14px; border-radius: 10px; font-size: 13px; }
+.form-status.success { background: rgba(52,199,89,.10); border: 1px solid rgba(52,199,89,.35); color: #c8f7d3; }
+.form-status.error { background: rgba(228,53,47,.10); border: 1px solid rgba(228,53,47,.35); color: #ffd0ce; }
 
 .site-footer { border-top: 1px solid var(--line); padding: 38px 0; color: #8d949d; font-size: 13px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 30px; align-items: center; }
