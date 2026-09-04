@@ -1,0 +1,15 @@
+{
+  "name": "Bremsecu",
+  "short_name": "Bremsecu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    {
+      "src": "/images/brand/favicon.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
