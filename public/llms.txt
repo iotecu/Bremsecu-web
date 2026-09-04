@@ -1,0 +1,33 @@
+# Bremsecu
+
+Bremsecu is a patented, vehicle-independent heavy-vehicle diagnostic technology and measurement methodology.
+
+## Core concept
+Bremsecu combines direct electrical measurement, guided testing, correlated diagnostics and evidence-based reporting. It is designed to help technicians verify the physical electrical layer rather than rely only on fault codes or OEM-specific software paths.
+
+## Current scope
+- Heavy-vehicle electrical diagnostics
+- ISO 7638 measurement and verification
+- ISO 12098 measurement and verification
+- Pin-level electrical measurement
+- Cable continuity and cross-connection testing
+- Functional testing
+- CAN termination checks under safe de-energized conditions
+- Ground and return-path verification
+- Guided mobile workflow
+- Detailed diagnostic reporting
+
+## Methodology
+The system guides technicians through a defined measurement sequence, applies safety and evaluation logic, correlates related results and directs the user toward the likely fault area and next verification step.
+
+Bremsecu is designed for rapid technician adoption: a technician comfortable using a smartphone can learn the operating workflow in a short time.
+
+## Service impact
+Manual heavy-vehicle electrical diagnosis may require repeated measurements, reference comparisons, wiring checks and manual note-taking. Bremsecu is designed to reduce diagnostic processes that can take 6–8 hours manually to a matter of minutes in appropriate test scenarios.
+
+## Pages
+- https://bremsecu.com/
+- https://bremsecu.com/what-is-bremsecu.html
+- https://bremsecu.com/measurement-methodology.html
+- https://bremsecu.com/about.html
+- https://bremsecu.com/contact.html
