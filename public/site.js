@@ -71,7 +71,7 @@ document.querySelectorAll('[data-youtube-id]').forEach((poster) => {
     if (!id) return;
     const iframe = document.createElement('iframe');
     iframe.className = 'youtube-frame';
-    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&controls=1&playsinline=1';
     iframe.title = poster.getAttribute('aria-label') || 'Bremsecu video';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
