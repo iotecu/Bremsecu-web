@@ -63,3 +63,18 @@ if (formStatus && params.has('sent')) {
   formStatus.classList.add(sent ? 'success' : 'error');
   formStatus.hidden = false;
 }
+
+
+document.querySelectorAll('[data-youtube-id]').forEach((poster) => {
+  poster.addEventListener('click', () => {
+    const id = poster.dataset.youtubeId;
+    if (!id) return;
+    const iframe = document.createElement('iframe');
+    iframe.className = 'youtube-frame';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    iframe.title = poster.getAttribute('aria-label') || 'Bremsecu video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    poster.replaceChildren(iframe);
+  }, { once: true });
+});
