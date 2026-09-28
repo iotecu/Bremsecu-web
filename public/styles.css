@@ -369,3 +369,42 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     background: linear-gradient(180deg, rgba(5,7,9,.05) 0%, rgba(5,7,9,.20) 45%, rgba(5,7,9,.86) 76%, rgba(5,7,9,.96) 100%);
   }
 }
+
+
+/* Mobile product hero typography refinement */
+@media (max-width: 900px) {
+  .product-hero--wt .product-hero-copy {
+    padding: 112px 22px 38px;
+  }
+  .product-hero--wt .product-hero-copy .eyebrow {
+    font-size: 11px;
+    letter-spacing: .16em;
+  }
+  .product-hero--wt .product-hero-copy h1 {
+    max-width: 88vw;
+    font-size: clamp(34px, 9vw, 44px);
+    line-height: 1.01;
+    margin: 10px 0 14px;
+  }
+  .product-hero--wt .product-hero-copy p {
+    max-width: 86vw;
+    font-size: 15px;
+    line-height: 1.42;
+  }
+}
+
+@media (max-width: 560px) {
+  .product-hero--wt .product-hero-copy {
+    padding: 104px 20px 34px;
+  }
+  .product-hero--wt .product-hero-copy h1 {
+    max-width: 90vw;
+    font-size: clamp(32px, 8.7vw, 40px);
+    line-height: 1.02;
+  }
+  .product-hero--wt .product-hero-copy p {
+    max-width: 88vw;
+    font-size: 14.5px;
+    line-height: 1.4;
+  }
+}
