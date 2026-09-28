@@ -1,33 +1,50 @@
 # Bremsecu
 
-Bremsecu is a patented, vehicle-independent heavy-vehicle diagnostic technology and measurement methodology.
+Bremsecu is a patented diagnostic measurement technology built around real electrical measurement, guided verification, correlated diagnostics and evidence-based reporting.
 
-## Core concept
-Bremsecu combines direct electrical measurement, guided testing, correlated diagnostics and evidence-based reporting. It is designed to help technicians verify the physical electrical layer rather than rely only on fault codes or OEM-specific software paths.
+## Product family
 
-## Current scope
-- Heavy-vehicle electrical diagnostics
+### Bremsecu G1
+Bremsecu G1 is a heavy-vehicle electrical diagnostic platform focused on standardized trailer and truck interfaces.
+Core functions include:
 - ISO 7638 measurement and verification
 - ISO 12098 measurement and verification
-- Pin-level electrical measurement
 - Cable continuity and cross-connection testing
-- Functional testing
-- CAN termination checks under safe de-energized conditions
+- Lamp and controlled load testing
+- CAN electrical and de-energized termination checks
 - Ground and return-path verification
-- Guided mobile workflow
-- Detailed diagnostic reporting
+- Guided diagnostic workflow
+- Detailed reporting
 
-## Methodology
-The system guides technicians through a defined measurement sequence, applies safety and evaluation logic, correlates related results and directs the user toward the likely fault area and next verification step.
+### Bremsecu WT Pro
+Bremsecu WT Pro is a guided pin-level diagnostic measurement platform.
+Core capabilities include:
+- Precision voltage measurement
+- Resistance and passive-circuit testing
+- Oscilloscope and dynamic signal analysis
+- Sensor testing
+- Relay and load verification
+- Connector and pin knowledge covering more than 70 vehicle brands
+- Guided selection of where and what to measure
+- Comparison of actual electrical values against defined reference behavior
+- User-guided learning of previously unknown connectors and wiring systems
+- Creation of reusable diagnostic profiles from field-acquired reference measurements
 
-Bremsecu is designed for rapid technician adoption: a technician comfortable using a smartphone can learn the operating workflow in a short time.
+WT Pro is designed as trainable diagnostic intelligence: it is not limited to a fixed database. User-guided reference acquisition can turn a previously unknown wiring system into structured, reusable diagnostic knowledge.
 
-## Service impact
-Manual heavy-vehicle electrical diagnosis may require repeated measurements, reference comparisons, wiring checks and manual note-taking. Bremsecu is designed to reduce diagnostic processes that can take 6–8 hours manually to a matter of minutes in appropriate test scenarios.
+## Core methodology
+Bremsecu does not simply collect measurements. It correlates them.
+
+The methodology links a connector's known structure and expected electrical behavior with real measurements taken in the field. A defined connector can include pin function, required measurement type, nominal behavior, test conditions and evaluation criteria.
+
+Key idea:
+"It knows the connector. It measures the reality."
 
 ## Pages
 - https://bremsecu.com/
 - https://bremsecu.com/what-is-bremsecu.html
+- https://bremsecu.com/bremsecu-g1.html
+- https://bremsecu.com/bremsecu-wt-pro.html
 - https://bremsecu.com/measurement-methodology.html
 - https://bremsecu.com/about.html
 - https://bremsecu.com/contact.html
