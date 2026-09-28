@@ -300,3 +300,72 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
   .grid-4, .metric-grid { grid-template-columns: 1fr; }
   .video-play { width: 62px; height: 62px; font-size: 22px; }
 }
+
+
+/* Product hero placement tuned to each image */
+.product-hero-copy {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(44px, 5vw, 96px);
+  padding-right: clamp(44px, 5vw, 96px);
+  padding-bottom: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-hero-copy h1 {
+  max-width: 560px;
+  font-size: clamp(46px, 4.4vw, 72px);
+}
+.product-hero-copy p {
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+/* G1 image has clean negative space on the right */
+.product-hero--g1 .product-hero-copy {
+  align-items: flex-start;
+  padding-left: 58vw;
+  padding-right: 5vw;
+}
+.product-hero--g1 .product-hero-shade {
+  background: linear-gradient(90deg, rgba(5,7,9,.03) 0%, rgba(5,7,9,.08) 45%, rgba(5,7,9,.62) 66%, rgba(5,7,9,.90) 100%);
+}
+
+/* WT Pro image carries the tablet on the right and hardware low-left */
+.product-hero--wt .product-hero-copy {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: clamp(155px, 17vh, 210px);
+  padding-left: clamp(52px, 6vw, 118px);
+  padding-right: 60vw;
+}
+.product-hero--wt .product-hero-copy h1 { max-width: 500px; }
+.product-hero--wt .product-hero-copy p { max-width: 500px; }
+.product-hero--wt .product-hero-shade {
+  background: linear-gradient(90deg, rgba(5,7,9,.72) 0%, rgba(5,7,9,.45) 30%, rgba(5,7,9,.08) 55%, rgba(5,7,9,.08) 100%);
+}
+
+@media (max-width: 1200px) {
+  .product-hero--g1 .product-hero-copy { padding-left: 54vw; }
+  .product-hero--wt .product-hero-copy { padding-right: 52vw; }
+}
+
+@media (max-width: 900px) {
+  .product-hero-copy {
+    justify-content: flex-end;
+    padding: 120px 22px 46px;
+  }
+  .product-hero-copy h1 { font-size: clamp(34px, 10vw, 54px); }
+  .product-hero--g1 .product-hero-copy,
+  .product-hero--wt .product-hero-copy {
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 120px 22px 46px;
+  }
+  .product-hero--g1 .product-hero-shade,
+  .product-hero--wt .product-hero-shade {
+    background: linear-gradient(180deg, rgba(5,7,9,.05) 0%, rgba(5,7,9,.20) 45%, rgba(5,7,9,.86) 76%, rgba(5,7,9,.96) 100%);
+  }
+}
