@@ -650,3 +650,37 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     padding-top: 20px;
   }
 }
+
+
+/* Final spacing fix for G1 guided interface block */
+.g1-ui-section {
+  padding-top: 130px;
+}
+.g1-ui-section .section-head {
+  padding-top: 0;
+  margin-bottom: 42px;
+}
+.g1-ui-section .section-head h2 {
+  margin-bottom: 24px;
+}
+.g1-ui-section .section-head p {
+  margin-top: 0;
+}
+.g1-ui-section .ui-orbit {
+  margin-top: 34px;
+}
+
+@media (max-width: 900px) {
+  .g1-ui-section {
+    padding-top: 96px;
+  }
+  .g1-ui-section .section-head {
+    margin-bottom: 30px;
+  }
+  .g1-ui-section .section-head h2 {
+    margin-bottom: 18px;
+  }
+  .g1-ui-section .ui-orbit {
+    margin-top: 24px;
+  }
+}
