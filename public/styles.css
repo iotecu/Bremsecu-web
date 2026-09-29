@@ -861,3 +861,77 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     object-position: center 34% !important;
   }
 }
+
+
+/* G1 layout stabilization: keep intro and animation physically separate */
+.g1-ui-intro {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 84px !important;
+}
+.g1-ui-section {
+  position: relative;
+  z-index: 1;
+  padding-top: 110px !important;
+  overflow: hidden !important;
+}
+.g1-ui-section .ui-orbit {
+  height: 680px !important;
+  margin: 0 auto 54px !important;
+  overflow: visible;
+}
+.g1-ui-section .ui-shot {
+  top: 56% !important;
+}
+.g1-ui-section .ui-caption {
+  margin-top: 18px !important;
+  padding-bottom: 12px;
+}
+
+/* G1 hero: enlarge the stage so the complete device/phone composition is not cropped */
+.product-hero--g1 {
+  min-height: 108svh !important;
+}
+.product-hero--g1 .product-hero-picture {
+  inset: 0 !important;
+  height: 100% !important;
+}
+.product-hero--g1 .product-hero-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center !important;
+}
+
+@media (max-width: 900px) {
+  .g1-ui-intro {
+    padding-bottom: 62px !important;
+  }
+  .g1-ui-section {
+    padding-top: 76px !important;
+  }
+  .g1-ui-section .ui-orbit {
+    height: 500px !important;
+  }
+  .g1-ui-section .ui-shot {
+    top: 55% !important;
+  }
+  .product-hero--g1 {
+    min-height: 96svh !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .g1-ui-intro {
+    padding-bottom: 52px !important;
+  }
+  .g1-ui-section {
+    padding-top: 60px !important;
+  }
+  .g1-ui-section .ui-orbit {
+    height: 430px !important;
+  }
+  .product-hero--g1 {
+    min-height: 100svh !important;
+  }
+}
