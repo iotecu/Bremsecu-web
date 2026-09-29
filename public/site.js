@@ -78,3 +78,65 @@ document.querySelectorAll('[data-youtube-id]').forEach((poster) => {
     poster.replaceChildren(iframe);
   }, { once: true });
 });
+
+
+const uiOrbit = document.querySelector('[data-ui-orbit]');
+if (uiOrbit) {
+  const uiShots = [...uiOrbit.querySelectorAll('.ui-shot')];
+  const uiLabel = document.querySelector('[data-ui-label]');
+  const uiNames = [
+    'Login',
+    'Vehicle Entry',
+    'ISO 7638 Voltage',
+    'ISO 12098 Voltage',
+    'Cable Test',
+    'ISO 7638 Cable',
+    'ISO 12098 Cable',
+    'CAN Termination',
+    'ISO 7638 Tractor CAN',
+    'ISO 7638 Trailer CAN',
+    'ISO 12098 Tractor CAN',
+    'ISO 12098 Trailer CAN',
+    'Lamp Test',
+    'Reports',
+    'Settings',
+    'Battery Status'
+  ];
+  let uiCurrent = 0;
+  let uiTimer;
+
+  function renderUiOrbit() {
+    uiShots.forEach((shot, index) => {
+      const relative = (index - uiCurrent + uiShots.length) % uiShots.length;
+      let slot = 5;
+
+      if (uiCurrent === 0 && index === 0) slot = 2;
+      else if (uiCurrent === 0 && index > 0 && index <= 2) slot = index + 2;
+      else if (relative === 0) slot = 2;
+      else if (relative === 1) slot = 3;
+      else if (relative === 2) slot = 4;
+      else if (relative === uiShots.length - 1) slot = 1;
+      else if (relative === uiShots.length - 2) slot = 0;
+
+      shot.setAttribute('data-slot', String(slot));
+    });
+
+    if (uiLabel) uiLabel.textContent = uiNames[uiCurrent] || 'Bremsecu G1';
+  }
+
+  function startUiOrbit() {
+    clearInterval(uiTimer);
+    uiTimer = setInterval(() => {
+      uiCurrent = (uiCurrent + 1) % uiShots.length;
+      renderUiOrbit();
+    }, 1000);
+  }
+
+  renderUiOrbit();
+  startUiOrbit();
+
+  uiOrbit.addEventListener('mouseenter', () => clearInterval(uiTimer));
+  uiOrbit.addEventListener('mouseleave', startUiOrbit);
+  uiOrbit.addEventListener('focusin', () => clearInterval(uiTimer));
+  uiOrbit.addEventListener('focusout', startUiOrbit);
+}
