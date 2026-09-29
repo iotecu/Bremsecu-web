@@ -720,3 +720,52 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     object-position: center 24%;
   }
 }
+
+
+/* G1 visual corrections - hard override */
+.g1-ui-section .section-head {
+  max-width: 900px;
+  margin: 0 auto 110px !important;
+}
+.g1-ui-section .section-head p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.g1-ui-section .ui-orbit {
+  margin-top: 0 !important;
+}
+
+.product-hero--g1 .product-hero-picture {
+  top: -9%;
+  bottom: 0;
+  height: 109%;
+}
+.product-hero--g1 .product-hero-picture img {
+  object-position: center center;
+}
+
+@media (max-width: 900px) {
+  .g1-ui-section .section-head {
+    margin-bottom: 78px !important;
+  }
+  .g1-ui-section .section-head p {
+    max-width: 92vw;
+    font-size: 15px;
+  }
+  .product-hero--g1 .product-hero-picture {
+    top: -7%;
+    height: 107%;
+  }
+}
+
+@media (max-width: 560px) {
+  .g1-ui-section .section-head {
+    margin-bottom: 62px !important;
+  }
+  .product-hero--g1 .product-hero-picture {
+    top: -5%;
+    height: 105%;
+  }
+}
