@@ -108,13 +108,14 @@ if (uiOrbit) {
   function renderUiOrbit() {
     uiShots.forEach((shot, index) => {
       const relative = (index - uiCurrent + uiShots.length) % uiShots.length;
-      let slot = 5;
+      let slot = 6;
 
       if (uiCurrent === 0 && index === 0) slot = 2;
-      else if (uiCurrent === 0 && index > 0 && index <= 2) slot = index + 2;
+      else if (uiCurrent === 0 && index > 0 && index <= 3) slot = index + 2;
       else if (relative === 0) slot = 2;
       else if (relative === 1) slot = 3;
       else if (relative === 2) slot = 4;
+      else if (relative === 3) slot = 5;
       else if (relative === uiShots.length - 1) slot = 1;
       else if (relative === uiShots.length - 2) slot = 0;
 
