@@ -935,3 +935,12 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     min-height: 100svh !important;
   }
 }
+
+
+/* Final G1 hero copy alignment */
+@media (min-width: 901px) {
+  .product-hero--g1 .product-hero-copy {
+    padding-left: 61vw !important;
+    padding-right: 3.5vw !important;
+  }
+}
