@@ -684,3 +684,39 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
     margin-top: 24px;
   }
 }
+
+
+/* G1 hero framing + interface overflow corrections */
+.product-hero--g1 .product-hero-picture img {
+  object-position: center 38%;
+}
+.g1-ui-section {
+  overflow: visible;
+  padding-bottom: 140px;
+}
+.g1-ui-section .ui-orbit {
+  overflow: visible;
+  margin-bottom: 56px;
+}
+.g1-ui-section .ui-caption {
+  margin-top: 24px;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .product-hero--g1 .product-hero-picture img {
+    object-position: center 30%;
+  }
+  .g1-ui-section {
+    padding-bottom: 112px;
+  }
+  .g1-ui-section .ui-orbit {
+    margin-bottom: 42px;
+  }
+}
+
+@media (max-width: 560px) {
+  .product-hero--g1 .product-hero-picture img {
+    object-position: center 24%;
+  }
+}
