@@ -516,8 +516,9 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
 }
 .ui-shot[data-slot="3"] { --slot: 3; opacity: .42; z-index: 2; filter: blur(.5px) saturate(.86); }
 .ui-shot[data-slot="4"] { --slot: 4; opacity: .14; z-index: 1; }
-.ui-shot[data-slot="5"] { --slot: 5; opacity: 0; pointer-events: none; }
-.ui-shot[data-slot="-1"] { --slot: -1; opacity: 0; pointer-events: none; }
+.ui-shot[data-slot="5"] { --slot: 5; opacity: .07; z-index: 0; filter: blur(1.5px) saturate(.68); }
+.ui-shot[data-slot="6"],
+.ui-shot[data-slot="-1"] { --slot: 6; opacity: 0; pointer-events: none; }
 
 @keyframes ui-pop {
   0% { transform: translate(-50%, -50%) translateY(10px) scale(.93); }
@@ -574,7 +575,8 @@ h1 { font-size: clamp(46px, 5vw, 82px); line-height: 1.02; margin: 14px 0 18px; 
   .ui-shot { width: 210px; }
   .ui-shot[data-slot="2"] { width: 255px; }
   .ui-shot[data-slot="0"],
-  .ui-shot[data-slot="4"] { display: none; }
+  .ui-shot[data-slot="4"],
+  .ui-shot[data-slot="5"] { display: none; }
   @supports not (width: calc(abs(1) * 1px)) {
     .ui-shot[data-slot="1"] { transform: translate(-50%, -50%) translateX(-165px) scale(.78); }
     .ui-shot[data-slot="3"] { transform: translate(-50%, -50%) translateX(165px) scale(.78); }
