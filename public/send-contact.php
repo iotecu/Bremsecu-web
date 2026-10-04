@@ -40,7 +40,7 @@ function source_path(string $source): string
 function redirect_result(bool $sent, string $source = 'contact'): void
 {
     $path = source_path($source);
-    $separator = str_contains($path, '?') ? '&' : '?';
+    $separator = strpos($path, '?') !== false ? '&' : '?';
     header('Location: ' . $path . $separator . 'sent=' . ($sent ? '1' : '0') . '#inquiry', true, 303);
     exit;
 }
@@ -81,7 +81,7 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
     redirect_result(false, $source);
 }
 
-if (in_array($source, ['homepage', 'g1', 'wt-pro', 'overview', 'methodology', 'about'], true)) {
+if (in_array($source, ['homepage', 'g1', 'wt-pro', 'overview', 'methodology', 'about', 'contact'], true)) {
     if ($company === '' || $phone === '' || $location === '' || $address === '' || $consent !== '1') {
         redirect_result(false, $source);
     }
