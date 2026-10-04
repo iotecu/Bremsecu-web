@@ -50,8 +50,9 @@ dots.forEach((dot, i) => {
 showSlide(0);
 startCarousel();
 
-const startedField = document.querySelector('input[name="form_started"]');
-if (startedField) startedField.value = String(Date.now());
+document.querySelectorAll('input[name="form_started"]').forEach((field) => {
+  field.value = String(Date.now());
+});
 
 const params = new URLSearchParams(window.location.search);
 const formStatus = document.querySelector('[data-form-status]');

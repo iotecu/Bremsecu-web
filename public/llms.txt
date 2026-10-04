@@ -1,6 +1,6 @@
 # Bremsecu
 
-Bremsecu is a patented diagnostic measurement technology built around real electrical measurement, guided verification, correlated diagnostics and evidence-based reporting.
+Bremsecu is an electrical diagnostic methodology and product family built around real measurement, reference values, guided verification, comparative diagnosis and evidence-based reporting.
 
 ## Product family
 
@@ -24,13 +24,13 @@ Core capabilities include:
 - Oscilloscope and dynamic signal analysis
 - Sensor testing
 - Relay and load verification
-- Connector and pin knowledge covering more than 70 vehicle brands
+- Structured connector and pin knowledge from supported technical data sources
 - Guided selection of where and what to measure
 - Comparison of actual electrical values against defined reference behavior
 - User-guided learning of previously unknown connectors and wiring systems
 - Creation of reusable diagnostic profiles from field-acquired reference measurements
 
-WT Pro is designed as trainable diagnostic intelligence: it is not limited to a fixed database. User-guided reference acquisition can turn a previously unknown wiring system into structured, reusable diagnostic knowledge.
+WT Pro is designed as a trainable diagnostic platform rather than a fixed instrument. User-guided reference acquisition can turn a previously unknown wiring system into structured, reusable diagnostic knowledge.
 
 ## Core methodology
 Bremsecu does not simply collect measurements. It correlates them.
@@ -38,7 +38,9 @@ Bremsecu does not simply collect measurements. It correlates them.
 The methodology links a connector's known structure and expected electrical behavior with real measurements taken in the field. A defined connector can include pin function, required measurement type, nominal behavior, test conditions and evaluation criteria.
 
 Key idea:
-"It knows the connector. It measures the reality."
+"Measure. Compare. Verify."
+
+Bremsecu complements fault-code diagnostics by verifying the physical electrical path behind the reported fault.
 
 ## Pages
 - https://bremsecu.com/
