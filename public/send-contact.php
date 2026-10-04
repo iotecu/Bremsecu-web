@@ -30,6 +30,9 @@ function source_path(string $source): string
         'g1' => '/bremsecu-g1.html',
         'wt-pro' => '/bremsecu-wt-pro.html',
         'contact' => '/contact.html',
+        'overview' => '/what-is-bremsecu.html',
+        'methodology' => '/measurement-methodology.html',
+        'about' => '/about.html',
     ];
     return $map[$source] ?? '/contact.html';
 }
@@ -78,7 +81,7 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
     redirect_result(false, $source);
 }
 
-if (in_array($source, ['homepage', 'g1', 'wt-pro'], true)) {
+if (in_array($source, ['homepage', 'g1', 'wt-pro', 'overview', 'methodology', 'about'], true)) {
     if ($company === '' || $phone === '' || $location === '' || $address === '' || $consent !== '1') {
         redirect_result(false, $source);
     }
